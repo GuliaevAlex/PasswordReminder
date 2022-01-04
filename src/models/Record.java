@@ -37,7 +37,7 @@ public class Record {
 
     @Override
     public String toString() {
-        return "{" +
+        return '\n'+"{" +
                 "Resource='" + resource + '\'' +
                 ", Login='" + login + '\'' +
                 ", Password='" + password + '\'' +

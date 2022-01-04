@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         while (true) {
-            System.out.println("Welcome to Password Reminder");
+            System.out.println('\n' + "Welcome to Password Reminder" + '\n');
             System.out.println("Для добавления записи пропишите add" + '\n'
                     + "Для просмотра записей пропишите show" + '\n'
                     + "Для выхода из программы пропишите exit");
