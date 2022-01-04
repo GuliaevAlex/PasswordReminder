@@ -37,10 +37,10 @@ public class Record {
 
     @Override
     public String toString() {
-        return "Record{" +
-                "resource='" + resource + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+        return "{" +
+                "Resource='" + resource + '\'' +
+                ", Login='" + login + '\'' +
+                ", Password='" + password + '\'' +
+                '}' +'\n';
     }
 }

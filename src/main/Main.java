@@ -18,7 +18,7 @@ public class Main {
                     + "Для выхода из программы пропишите exit");
             scanFromUserImput();
 
-            switch (info) {
+            switch (infoFromUser) {
                 case "add":
                     int newIndex = 0;
                         newIndex = getEmptySlot();
@@ -30,7 +30,7 @@ public class Main {
 
                     break;
                 case "exit":
-                    exitProgramm(info);
+                    exitProgramm(infoFromUser);
 
             }
         }
@@ -54,19 +54,19 @@ public class Main {
 
         System.out.println("Введите название ресурса: ");
         scanFromUserImput();
-        exitProgramm(info);
-        resourceName = info;
+        exitProgramm(infoFromUser);
+        resourceName = infoFromUser;
 
 
         System.out.println("Введите Login: ");
         scanFromUserImput();
-        exitProgramm(info);
-        login = info;
+        exitProgramm(infoFromUser);
+        login = infoFromUser;
 
         System.out.println("Введите Password: ");
         scanFromUserImput();
-        exitProgramm(info);
-        password = info;
+        exitProgramm(infoFromUser);
+        password = infoFromUser;
 
         return new Record(resourceName, login, password);
     }
