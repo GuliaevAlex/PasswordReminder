@@ -1,7 +1,9 @@
 package helpers;
 
-import models.Record;
+import models.*;
 
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Scanner;
 
 public class InputHelper {
@@ -14,12 +16,14 @@ public class InputHelper {
         return infoFromUser;
     }
 
-    public static void showArray(Record[] records) {
-        for (Record r : records) {
-            if (r != null) {
-                System.out.println(r);
-            }
+
+    public static void showArray(Map<RecordKey, RecordData> map) {
+        Iterator<Map.Entry<RecordKey, RecordData>> itr1 = map.entrySet().iterator();
+        while (itr1.hasNext()) {
+            Map.Entry<RecordKey, RecordData> entry = itr1.next();
+            System.out.println(entry.getKey() + "," + entry.getValue());
         }
+
     }
 
     public static void exitProgramm(String e) {
