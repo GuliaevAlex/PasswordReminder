@@ -26,6 +26,10 @@ public class InputHelper {
 
     }
 
+    public static void clear(Map<RecordKey, RecordData> map){
+        map.clear();
+    }
+
     public static void exitProgramm(String e) {
         if (e.equals("exit")) {
             System.exit(0);

@@ -1,8 +1,9 @@
 package models;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class RecordData {
+public class RecordData implements Serializable {
     private String login;
     private String password;
 
@@ -35,7 +36,7 @@ public class RecordData {
     public String toString() {
         return " Login='" + login + '\'' +
                 ", Password='" + password + '\'' +
-                '}';
+                '}' + '\n';
     }
 
     @Override

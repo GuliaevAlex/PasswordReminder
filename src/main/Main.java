@@ -2,6 +2,10 @@ package main;
 
 import models.RecordData;
 import models.RecordKey;
+import readMapInTXT.Read;
+import writeMapToTXT.Write;
+//import readMapInTXT.Read;
+//import writeMapToTXT.Write;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,16 +15,16 @@ import static helpers.InputHelper.*;
 public class Main {
 
 
-    private static final Map<RecordKey, RecordData> records = new HashMap<>();
+    private static Map<RecordKey, RecordData> records = new HashMap<>();
 
     public static void main(String[] args) {
-
+        System.out.println('\n' + "Welcome to Password Reminder" + '\n');
         while (true) {
-            System.out.println('\n' + "Welcome to Password Reminder" + '\n');
             System.out.println("Для добавления записи пропишите add" + '\n'
                     + "Для изменения записи пропишите upgrade" + '\n'
                     + "Для удаления записи пропишите remove" + '\n'
                     + "Для просмотра записей пропишите show" + '\n'
+                    + "Для удаления всехзаписей пропишите clear" + '\n'
                     + "Для выхода из программы пропишите exit");
             scanFromUserImput();
 
@@ -36,14 +40,27 @@ public class Main {
                 case "remove":
                     System.out.println("Введите название русурса который хотите удалить");
                     records.remove(scanResource());
-
-
                     break;
 
                 case "show":
-                    showArray(records);
-
+                    System.out.println('\n' + "Start load from file:");
+                    Read read = new Read();
+                    records = read.readObject();
+                    if(records.isEmpty()){
+                        System.out.println("File is empty" + '\n');
+                    }else{
+                    showArray(records);}
                     break;
+
+                case "save":
+                    Write write = new Write();
+                    write.writeObject(records);
+                    break;
+
+                case "clear":
+                    clear(records);
+                    break;
+
                 case "exit":
                     exitProgramm(infoFromUser);
 

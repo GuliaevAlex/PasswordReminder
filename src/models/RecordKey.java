@@ -1,8 +1,9 @@
 package models;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class RecordKey {
+public class RecordKey implements Serializable {
     private String resource;
 
 
@@ -22,7 +23,7 @@ public class RecordKey {
 
     @Override
     public String toString() {
-        return "{" + "Resource=" + resource;
+        return '\n' +"{" + "Resource=" + resource;
     }
 
     @Override
