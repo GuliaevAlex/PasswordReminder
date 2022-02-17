@@ -12,7 +12,7 @@ public class InputHelper {
 
     public static String scanFromUserImput() {
         Scanner s = new Scanner(System.in);
-        infoFromUser = s.nextLine();
+        infoFromUser = s.nextLine().toLowerCase();
         return infoFromUser;
     }
 
@@ -30,10 +30,18 @@ public class InputHelper {
         map.clear();
     }
 
+    public static RecordData getRecord(Map<RecordKey, RecordData> map, RecordKey key){
+       return map.get(key);
+
+    }
+
+
     public static void exitProgramm(String e) {
         if (e.equals("exit")) {
             System.exit(0);
         }
+
+
     }
 
 }

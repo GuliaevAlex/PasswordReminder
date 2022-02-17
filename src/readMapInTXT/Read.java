@@ -13,7 +13,7 @@ public class Read {
         FileInputStream reader;
 
         try {
-            reader = new FileInputStream("/Users/Guliaev_Alex/Downloads/PasswordReminder/file.txt");
+            reader = new FileInputStream("file.txt");
             ObjectInputStream objectInputStream = new ObjectInputStream(reader);
 
             return (Map<RecordKey, RecordData>) objectInputStream.readObject();

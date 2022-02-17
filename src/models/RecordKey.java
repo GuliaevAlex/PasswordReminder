@@ -23,7 +23,7 @@ public class RecordKey implements Serializable {
 
     @Override
     public String toString() {
-        return '\n' +"{" + "Resource=" + resource;
+        return '\n' + "{" + "Resource=" + resource;
     }
 
     @Override

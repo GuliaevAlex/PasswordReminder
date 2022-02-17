@@ -4,8 +4,7 @@ import models.RecordData;
 import models.RecordKey;
 import readMapInTXT.Read;
 import writeMapToTXT.Write;
-//import readMapInTXT.Read;
-//import writeMapToTXT.Write;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +21,8 @@ public class Main {
         while (true) {
             System.out.println("Для добавления записи пропишите add" + '\n'
                     + "Для изменения записи пропишите upgrade" + '\n'
-                    + "Для удаления записи пропишите remove" + '\n'
+                    + "Для удаления записи пропишите remove" +'\n'
+                    + "Для просмотра конкретной записи пропишите get"+ '\n'
                     + "Для просмотра записей пропишите show" + '\n'
                     + "Для удаления всехзаписей пропишите clear" + '\n'
                     + "Для выхода из программы пропишите exit");
@@ -59,6 +59,10 @@ public class Main {
 
                 case "clear":
                     clear(records);
+                    break;
+
+                case "get":
+                    System.out.println(getRecord(records,scanResource() ));
                     break;
 
                 case "exit":
