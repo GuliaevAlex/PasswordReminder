@@ -10,6 +10,10 @@ public class RecordData implements Serializable {
     public RecordData() {
     }
 
+
+
+
+
     public RecordData(String login, String password) {
         this.login = login;
         this.password = password;
@@ -35,8 +39,7 @@ public class RecordData implements Serializable {
     @Override
     public String toString() {
         return " Login='" + login + '\'' +
-                ", Password='" + password + '\'' +
-                '}' + '\n';
+                ", Password='" + password + '\'' + '\n';
     }
 
     @Override
